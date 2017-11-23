@@ -45,8 +45,6 @@ Given('The contact list is display', function (callback) {
 When('User clicks on remove button of the first contact', function (callback) {
     // Write code here that turns the phrase above into concrete actions
 
-    this.browser.visit ("/" ,(err) => {
-        if (err) throw err ;
         var ContactList = this.browser.tabs.current.Contact;
         var ContactList = ContactList.Contacts.instance().iterator();
 
@@ -55,7 +53,6 @@ When('User clicks on remove button of the first contact', function (callback) {
 
 
         callback();
-    });
 });
 
 
@@ -63,9 +60,6 @@ When('User clicks on remove button of the first contact', function (callback) {
 
 Then('The first contact is removed', function (callback) {
     // Write code here that turns the phrase above into concrete actions
-
-    this.browser.visit ("/" ,(err) => {
-        if (err) throw err ;
 
         var ContactList = this.browser.tabs.current.Contact;
         var ContactList = ContactList.Contacts.instance().iterator();
@@ -77,6 +71,6 @@ Then('The first contact is removed', function (callback) {
 
         callback();
 
-    });
+
 });
 
